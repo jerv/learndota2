@@ -43,7 +43,7 @@ page '/*.txt', layout: false
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 configure :build do
-  config[:host] = "https://jerv.github.io/learndota2/"
+  config[:host] = "<base href='https://jerv.github.io/learndota2/'>"
 end
 
 # configure :build do
