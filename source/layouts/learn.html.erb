@@ -14,29 +14,113 @@
     <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <%= yield %>
 
-    <footer>
-      <p class="mb-0">
-        Brought to you by 
-        <%= link_to(
-          "@DirtyChump",
-          "https://twitter.com/DirtyChump",
-          target: "_blank"
-        ) %>
-        |
-        This Website is not affiliated with Valve
-        |
-        <%= link_to(
-          "Play Dota 2",
-          "http://www.dota2.com/play/",
-          target: "_blank"
-        ) %>
-      </p>
-    </footer>
+    <section class="d-flex align-items-stretch grand-container">
+      <nav>
+        <h4 class="mb-0">          
+          <%= link_to("Learn Dota2","/", class:"site-id") %>
+        </h4>
+        <section class="nav-links">
+          <h5>Getting Started <i class="fas fa-plus"></i></h5>
+          <section class="nav-section">
+            <%= link_to("Is Dota Right For Me?","ch0-is-dota-right-for-me.html.erb") %> <!-- brief history of dota, how is it controlled, whats gameplay like, how many players etc -->
+            <%= link_to("What is Dota?","ch1-what-is-dota.html.erb") %> <!-- how do i win? whats the objective? Turn speed, etc -->
+            <%= link_to("Understanding the HUD","word.html.erb") %> 
+            <%= link_to("Need to Know on Heroes","word.html.erb") %>
+            <%= link_to("What Hero Should I Play?","word.html.erb") %>
+          </section>
+          <h5>The Basics <i class="fas fa-plus"></i></h5>
+          <section class="nav-section">
+            <%= link_to("Spells & XP","word.html.erb") %>
+            <%= link_to("Talents","word.html.erb") %>
+            <%= link_to("Lanes, what are they?","word.html.erb") %>
+            <%= link_to("Creeps","word.html.erb") %>
+            <%= link_to("Towers","word.html.erb") %>
+            <%= link_to("Gold","word.html.erb") %>
+            <%= link_to("Intro to Items","word.html.erb") %>
+            <%= link_to("Using the Shop & Cour","word.html.erb") %>
+            <%= link_to("Death & Kills","word.html.erb") %>
+            <%= link_to("Runes","word.html.erb") %>
+            <%= link_to("The Jungle","word.html.erb") %>
+          </section>
+          <h5>Understanding the Game <i class="fas fa-plus"></i></h5>
+          <section class="nav-section">
+            <%= link_to("Team Composition & Positions","word.html.erb") %>
+            <%= link_to("Stages of the Game","word.html.erb") %>
+            <%= link_to("Ganks & Rotations","word.html.erb") %>
+            <%= link_to("Teamfights","word.html.erb") %>
+            <%= link_to("Powerspikes","word.html.erb") %>
+            <%= link_to("Vision & Wards","word.html.erb") %>
+            <%= link_to("Roshan","word.html.erb") %>
+            <%= link_to("Hero & Item Theory","word.html.erb") %>
+            <%= link_to("Shrines","word.html.erb") %>
+            <%= link_to("Objective Gaming","word.html.erb") %> <!-- spefifics on what dead barracks do, backdoor protection, megas, shrine limitations, etc -->
+            <%= link_to("Buyback","word.html.erb") %>
+          </section>
+          <h5>Advanced Ideas <i class="fas fa-plus"></i></h5>
+          <section class="nav-section">
+            <%= link_to("Advanced Laning","word.html.erb") %> <!-- creep aggro, pulling, vision, rotating for runes, etc -->
+            <%= link_to("What Stats Mean","word.html.erb") %> <!-- stats, ms, attack speed -->
+            <%= link_to("Damage Types","word.html.erb") %>
+            <%= link_to("What is 'The Meta'","word.html.erb") %>
+            <%= link_to("General Noob Tips","word.html.erb") %>
+          </section>
+
+        </section>
+      </nav>
+      <section class="w-100 learn-pane d-flex flex-column justify-content-between">
+        <section>
+          <%= yield %>
+        </section>
+        <footer>
+          <p class="mb-0">
+            Brought to you by 
+            <%= link_to(
+              "@DirtyChump",
+              "https://twitter.com/DirtyChump",
+              target: "_blank"
+            ) %>
+            |
+            This Website is not affiliated with Valve
+            |
+            <%= link_to(
+              "Play Dota 2",
+              "http://www.dota2.com/play/",
+              target: "_blank"
+            ) %>
+          </p>
+        </footer>
+      </section>
+    </section>
+
     
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      (function(){
+        navLinks = $('nav .nav-links');
+        navHeaders = $('nav .nav-links h5');
+        navSections = $('nav .nav-links section');
+        navAnchors = $('nav .nav-links a');
+
+        // navSections.slideUp(300);
+
+        navHeaders.on('click', function(){
+          $(this).toggleClass('opening');
+          $(this).find('i').toggleClass('fa-plus fa-minus');
+          if ($(this).hasClass('opening')) {
+            $(this).next('.nav-section').slideDown(300);
+          }
+          else {
+            $(this).next('.nav-section').slideUp(300);
+          }
+        });
+
+          
+      })();
+    </script>
+
   </body>
 </html>
