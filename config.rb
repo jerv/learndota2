@@ -42,6 +42,10 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
+configure :build do
+  config[:host] = "https://jerv.github.io/learndota2/"
+end
+
 # configure :build do
 #   activate :minify_css
 #   activate :minify_javascript
