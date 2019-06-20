@@ -47,6 +47,15 @@ p {
   font-size: 1.2rem;
 }
 
+img {
+  max-width: 100%;
+}
+
+.framed {
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  border: 2px solid #999;
+}
+
 .u-icon-image {
   max-width: 64px;
 }
@@ -75,6 +84,20 @@ p {
   background-color: #1E1F23;
   p {
     color: #7d7d7d;
+  }
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #fff;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #eee;
+  &:before {
+    content:"“";
+  }
+  &:after {
+    content:"”";
   }
 }
 
@@ -150,7 +173,7 @@ nav {
         border-left: 5px solid #dc3545;
       }
       &:nth-child(odd) {
-        background-color: rgba(80,80,80,0.1);
+        background-color: rgba(0,0,0,0.1);
       }
       &:hover {
         text-decoration: none;

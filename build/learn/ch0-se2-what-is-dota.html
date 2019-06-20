@@ -5,89 +5,92 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Learn Dota 2" %></title>
+    <title>Is Dota Right For Me?</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
   </head>
   <body>
 
     <section class="d-flex align-items-stretch grand-container">
       <nav>
         <h4 class="mb-0">          
-          <%= link_to("Learn Dota2","/", class:"site-id") %>
+          <a href="/" class="site-id">Learn Dota2</a>
         </h4>
         <section class="nav-links">
           <h5>Getting Started <i class="fas fa-plus"></i></h5>
           <section chapter="ch0" class="nav-section">
-            <%= link_to("Is Dota Right For Me?","learn/ch0-se1-is-dota-right-for-me") %> <!-- brief history of dota, how is it controlled, whats gameplay like, how many players etc -->
-            <%= link_to("What is Dota?","learn/ch0-se2-what-is-dota") %> <!-- how do i win? whats the objective? Turn speed, etc -->
-            <%= link_to("Understanding the HUD","learn/word") %> 
-            <%= link_to("The Heroes of Dota","learn/word") %>
-            <%= link_to("What Hero Should I Play?","learn/word") %>
+            <a href="/learn/ch0-se1-is-dota-right-for-me.html">Is Dota Right For Me?</a> <!-- brief history of dota, how is it controlled, whats gameplay like, how many players etc -->
+            <a href="/learn/ch0-se2-what-is-dota.html">What is Dota?</a> <!-- how do i win? whats the objective? Turn speed, etc -->
+            <a href="learn/word">Understanding the HUD</a> 
+            <a href="learn/word">The Heroes of Dota</a>
+            <a href="learn/word">What Hero Should I Play?</a>
           </section>
           <h5>The Basics <i class="fas fa-plus"></i></h5>
           <section chapter="ch1" class="nav-section">
-            <%= link_to("Spells & XP","learn/word") %>
-            <%= link_to("Talents","learn/word") %>
-            <%= link_to("Lanes, what are they?","learn/word") %>
-            <%= link_to("Creeps","learn/word") %>
-            <%= link_to("Towers","learn/word") %>
-            <%= link_to("Gold","learn/word") %>
-            <%= link_to("Intro to Items","learn/word") %>
-            <%= link_to("Using the Shop & Cour","learn/word") %>
-            <%= link_to("Death & Kills","learn/word") %>
-            <%= link_to("Runes","learn/word") %>
-            <%= link_to("The Jungle","learn/word") %>
+            <a href="learn/word">Spells & XP</a>
+            <a href="learn/word">Talents</a>
+            <a href="learn/word">Lanes, what are they?</a>
+            <a href="learn/word">Creeps</a>
+            <a href="learn/word">Towers</a>
+            <a href="learn/word">Gold</a>
+            <a href="learn/word">Intro to Items</a>
+            <a href="learn/word">Using the Shop & Cour</a>
+            <a href="learn/word">Death & Kills</a>
+            <a href="learn/word">Runes</a>
+            <a href="learn/word">The Jungle</a>
           </section>
           <h5>Understanding the Game <i class="fas fa-plus"></i></h5>
           <section chapter="ch2" class="nav-section">
-            <%= link_to("Team Composition & Positions","learn/word") %>
-            <%= link_to("Stages of the Game","learn/word") %>
-            <%= link_to("Ganks & Rotations","learn/word") %>
-            <%= link_to("Teamfights","learn/word") %>
-            <%= link_to("Powerspikes","learn/word") %>
-            <%= link_to("Vision & Wards","learn/word") %>
-            <%= link_to("Roshan","learn/word") %>
-            <%= link_to("Hero & Item Theory","learn/word") %>
-            <%= link_to("Shrines","learn/word") %>
-            <%= link_to("Objective Gaming","learn/word") %> <!-- spefifics on what dead barracks do, backdoor protection, megas, shrine limitations, etc -->
-            <%= link_to("Buyback","learn/word") %>
+            <a href="learn/word">Team Composition & Positions</a>
+            <a href="learn/word">Stages of the Game</a>
+            <a href="learn/word">Ganks & Rotations</a>
+            <a href="learn/word">Teamfights</a>
+            <a href="learn/word">Powerspikes</a>
+            <a href="learn/word">Vision & Wards</a>
+            <a href="learn/word">Roshan</a>
+            <a href="learn/word">Hero & Item Theory</a>
+            <a href="learn/word">Shrines</a>
+            <a href="learn/word">Objective Gaming</a> <!-- spefifics on what dead barracks do, backdoor protection, megas, shrine limitations, etc -->
+            <a href="learn/word">Buyback</a>
           </section>
           <h5>Advanced Ideas <i class="fas fa-plus"></i></h5>
           <section chapter="ch3" class="nav-section">
-            <%= link_to("Advanced Laning","learn/word") %> <!-- creep aggro, pulling, vision, rotating for runes, etc -->
-            <%= link_to("What Stats Mean","learn/word") %> <!-- stats, ms, attack speed -->
-            <%= link_to("Damage Types","learn/word") %>
-            <%= link_to("What is 'The Meta'","learn/word") %>
-            <%= link_to("General Noob Tips","learn/word") %>
+            <a href="learn/word">Advanced Laning</a> <!-- creep aggro, pulling, vision, rotating for runes, etc -->
+            <a href="learn/word">What Stats Mean</a> <!-- stats, ms, attack speed -->
+            <a href="learn/word">Damage Types</a>
+            <a href="learn/word">What is 'The Meta'</a>
+            <a href="learn/word">General Noob Tips</a>
           </section>
 
         </section>
       </nav>
       <section class="w-100 learn-pane d-flex flex-column justify-content-between">
         <section>
-          <%= yield %>
+          <section class="u-black py-5">
+  <div class="container">
+ 
+    <h1>What is Dota?</h1>
+    <p class="mt-3 mb-0">How is it played? How do you Win or Lose?</p>
+  </div>
+</section>
+
+<section class="container my-5">
+  Words
+</section>
+
         </section>
         <footer>
           <p class="mb-0">
             Brought to you by 
-            <%= link_to(
-              "@DirtyChump",
-              "https://twitter.com/DirtyChump",
-              target: "_blank"
-            ) %>
+            <a href="https://twitter.com/DirtyChump" target="_blank">@DirtyChump</a>
             |
             This Website is not affiliated with Valve
             |
-            <%= link_to(
-              "Play Dota 2",
-              "http://www.dota2.com/play/",
-              target: "_blank"
-            ) %>
+            <a href="http://www.dota2.com/play/" target="_blank">Play Dota 2</a>
           </p>
         </footer>
       </section>
